@@ -40,8 +40,7 @@ def validate_args(args):
         if args.sequence:
             # detect input sequence type
             is_valid, detected_type = seq_validator(args.sequence)
-            # set universal operations
-            universal_ops = [args.length]
+        
             # set sequence type based on operation
             if args.transcribe:
                 if detected_type != "DNA":
