@@ -32,8 +32,7 @@ def compute_skew(genome: str) -> int:
 # if __name__ == "__main__":
 #     # print(compute_skew("CATGGGCATCGGCCATACGCC"))
 #     print(compute_skew("GAGCCACCGCGATA"))
-    
-    
+
 
 def minimum_skew(genome: str) -> list:
     """
@@ -47,13 +46,13 @@ def minimum_skew(genome: str) -> list:
     """
     with open(genome, "r") as file:
         genome = file.read().strip()
-    
+
     # compute skew
     skew = compute_skew(genome)
 
     # find minimum skew position
     min_skew = min(skew)
-    
+
     # return all minimum positions
     return [i for i, s in enumerate(skew) if s == min_skew]
 
