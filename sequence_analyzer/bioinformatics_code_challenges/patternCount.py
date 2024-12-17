@@ -39,23 +39,26 @@ def PatternCount(text: str, pattern: str) -> int:
 if __name__ == "__main__":
     # print(PatternCount("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC", "ATTCTGACT"))
     # print(PatternCount("GCGCG", "GCG"))
-    print(PatternCount("GATATATGCATATACTT", "ATAT"))
+    # print(PatternCount("GATATATGCATATACTT", "ATAT"))
+    # print(PatternCount("ACTGTACGATGATGTGTGTCAAAG", "TGT"))
+    # print(PatternCount("GACGATATACGACGATA", "ATA"))
+    print(PatternCount("ACTGTACGATGATGTGTGTCAAAG", "TGT"))
     
     
-def findPosition(pattern: str, genome: str) -> list:
-    # read genome from a file on the command line
-    with open(genome, "r") as f:
-        genome = f.read().strip()
+# def findPosition(pattern: str, genome: str) -> list:
+#     # read genome from a file on the command line
+#     with open(genome, "r") as f:
+#         genome = f.read().strip()
 
-    positions = []
+#     positions = []
 
-    for i in range(len(genome) - len(pattern) + 1):
-        if genome[i : i + len(pattern)] == pattern:
-            positions.append(i)
+#     for i in range(len(genome) - len(pattern) + 1):
+#         if genome[i : i + len(pattern)] == pattern:
+#             positions.append(i)
 
-    return positions
+#     return positions
 
 
-genome = "Vibrio_cholerae.txt"
-# print(findPosition("CTTGATCAT", genome=genome))
-print(findPosition("ATGATCAAG", genome=genome))
+# genome = "Vibrio_cholerae.txt"
+# # print(findPosition("CTTGATCAT", genome=genome))
+# print(findPosition("ATGATCAAG", genome=genome))
