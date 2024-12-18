@@ -43,18 +43,53 @@ def ApproxPatternMatching(pattern: str, genome: str, d: int) -> list:
         if hamming_distance_strings(pattern, sliding_window) <= d:
             positions.append(i)
 
-    return " ".join(str(pos) for pos in positions)
+    # return " ".join(str(pos) for pos in positions)
+    return positions
+
+
+# if __name__ == "__main__":
+#     with open("datasets/ApproxMatching_dataset.txt", "r") as file:
+#         lines = file.readlines()
+
+#     pattern = lines[0].strip()
+#     genome = lines[1].strip()
+#     d = int(lines[2].strip())
+#     print(
+#         ApproxPatternMatching(
+#             pattern,
+#             genome,
+#             d,
+#         )
+#     )
+    
+
+
+def ApproxPatternCount(pattern: str, genome: str, d: int) -> int:
+    """
+    Find the total count of patterns with mismatches
+    
+    Args:
+        pattern (str): Pattern to search for
+        genome (str): Path to genome file to search in
+        d (int): Maximum number of mismatches allowed
+        
+    Return:
+        int: Number of patterns with mismatches 
+    """
+    positions = ApproxPatternMatching(pattern, genome, d)
+    total_occurrences = len(positions)
+    return f"Positions: {positions}\nOccurrences: {total_occurrences}"
 
 
 if __name__ == "__main__":
-    with open("datasets/ApproxMatching_dataset.txt", "r") as file:
+    with open("datasets/approxCount_dataset.txt", "r") as file:
         lines = file.readlines()
 
     pattern = lines[0].strip()
     genome = lines[1].strip()
     d = int(lines[2].strip())
     print(
-        ApproxPatternMatching(
+        ApproxPatternCount(
             pattern,
             genome,
             d,
