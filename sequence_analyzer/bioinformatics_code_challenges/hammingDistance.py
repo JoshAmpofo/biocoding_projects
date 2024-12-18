@@ -35,4 +35,3 @@ if __name__ == "__main__":
     g1 = "datasets/ham_dist_d1.txt" 
     g2 = "datasets/ham_dist_d2.txt"
     print(hamming_distance(g1, g2))
-
