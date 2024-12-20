@@ -110,10 +110,10 @@ def frequentWordsWithMismatches(genome: str, k: int, d: int) -> list:
 
 
 if __name__ == "__main__":
-    with open("datasets/frequentMismatch_dataset.txt", "r") as file:
+    with open("datasets/Salmonella_full_genome.txt", "r") as file:
 
         genome = file.readline().strip()
-        k, d = map(int, file.readline().split())
+        # k, d = map(int, file.readline().split())
+        k, d = (9, 1)
         print(f"k: {k}\nd: {d}")
     print(frequentWordsWithMismatches(genome, k, d))
-   

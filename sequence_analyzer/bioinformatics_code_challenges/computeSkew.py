@@ -58,5 +58,5 @@ def minimum_skew(genome: str) -> list:
 
 
 if __name__ == "__main__":
-    genome = "min_skew_dataset_30277_10.txt"
+    genome ="datasets/Salmonella_full_genome.txt"
     print(minimum_skew(genome))

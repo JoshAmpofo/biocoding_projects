@@ -48,7 +48,7 @@ def ClumpFinding(genome: str, k: int, L: int, t: int) -> list:
 # # L = 100
 # # t = 4
 
-genome = "E_coli.txt"
+genome = "datasets/Salmonella_full_genome.txt"
 k = 9
 L = 500
 t = 3

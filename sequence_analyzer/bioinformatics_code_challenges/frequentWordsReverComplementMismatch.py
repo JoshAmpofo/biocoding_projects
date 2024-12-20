@@ -115,12 +115,10 @@ def frequent_words_with_mismatches_and_rc(text: str, k: int, d: int) -> list:
 
 
 if __name__ == "__main__":
-    with open(
-        "datasets/frequentComplement_dataset.txt", "r"
-    ) as file:
-
+    with open("datasets/Salmonella_full_genome.txt", "r") as file:
         genome = file.readline().strip()
-        k, d = map(int, file.readline().split())
+        k, d = (9, 1)
+        # k, d = map(int, file.readline().split())
         print(f"k: {k}\nd: {d}")
     result = frequent_words_with_mismatches_and_rc(genome, k, d)
     print(" ".join(result))
