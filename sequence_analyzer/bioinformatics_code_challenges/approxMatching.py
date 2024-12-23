@@ -82,16 +82,18 @@ def ApproxPatternCount(pattern: str, genome: str, d: int) -> int:
 
 
 if __name__ == "__main__":
-    with open("datasets/approxCount_dataset.txt", "r") as file:
-        lines = file.readlines()
+    # with open("datasets/approxCount_dataset.txt", "r") as file:
+    #     lines = file.readlines()
 
-    pattern = lines[0].strip()
-    genome = lines[1].strip()
-    d = int(lines[2].strip())
-    print(
-        ApproxPatternCount(
-            pattern,
-            genome,
-            d,
-        )
-    )
+    # pattern = lines[0].strip()
+    # genome = lines[1].strip()
+    # d = int(lines[2].strip())
+    # print(
+    #     ApproxPatternCount(
+    #         pattern,
+    #         genome,
+    #         d,
+    #     )
+    # )
+    print(ApproxPatternCount("CCC", "CATGCCATTCGCATTGTCCCAGTGA", 2))
+    

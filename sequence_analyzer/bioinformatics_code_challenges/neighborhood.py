@@ -79,7 +79,10 @@ def neighborhood(pattern: str, d: int) -> list:
                         current_neighbors.add(''.join(pat_list))
         neighbors.update(current_neighbors)
 
-    return sorted(list(neighbors))
+    return f"{sorted(list(neighbors))}\nlen: {len(neighbors)}"
 
 if __name__ == "__main__":
-    print(neighborhood("GCGGTAGGAGA", 3))
+    print(neighborhood("TGCAT", 2))
+    
+
+# print(hamming_distance_strings("CTACAGCAATACGATCATATGCGGATCCGCAGTGGCCGGTAGACACACGT", "CTACCCCGCTGCTCAATGACCGGGACTAAAGAGGCGAAGATTATGGTGTG"))

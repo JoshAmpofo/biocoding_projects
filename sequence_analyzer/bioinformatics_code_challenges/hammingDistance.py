@@ -12,10 +12,6 @@ def hamming_distance(g1: str, g2: str) -> int:
     Returns:
         int: Hamming Distance
     """
-    with open(g1, "r") as file1, open(g2, "r") as file2:
-        g1 = file1.read().strip()
-        g2 = file2.read().strip()
-        
     # check if len of g1 and g2 are the same
     if len(g1) != len(g2):
         return f"Error. Genomes must be of the same length."
@@ -32,6 +28,11 @@ def hamming_distance(g1: str, g2: str) -> int:
 
 
 if __name__ == "__main__":
-    g1 = "datasets/ham_dist_d1.txt" 
-    g2 = "datasets/ham_dist_d2.txt"
+    # with open(g1, "r") as file1, open(g2, "r") as file2:
+    #     g1 = file1.read().strip()
+    #     g2 = file2.read().strip()
+    # g1 = "datasets/ham_dist_d1.txt" 
+    # g2 = "datasets/ham_dist_d2.txt"
+    g1 = "CTTGAAGTGGACCTCTAGTTCCTCTACAAAGAACAGGTTGACCTGTCGCGAAG"
+    g2 = "ATGCCTTACCTAGATGCAATGACGGACGTATTCCTTTTGCCTCAACGGCTCCT"
     print(hamming_distance(g1, g2))

@@ -34,29 +34,33 @@ def compute_skew(genome: str) -> int:
 #     print(compute_skew("GAGCCACCGCGATA"))
 
 
-def minimum_skew(genome: str) -> list:
+def min_max_skew(genome: str) -> list:
     """
-    Find the minimum skew position in a genome
+    Find the minimum/maximum skew position in a genome
 
     Args:
         genome (str): target linear genome sequence
 
     Returns:
-        list: list of minimum skew positions in the genome
+        list: list of minimum/maximum skew positions in the genome
     """
-    with open(genome, "r") as file:
-        genome = file.read().strip()
-
     # compute skew
     skew = compute_skew(genome)
 
     # find minimum skew position
     min_skew = min(skew)
+    max_skew = max(skew)
 
     # return all minimum positions
-    return [i for i, s in enumerate(skew) if s == min_skew]
+    # return [i for i, s in enumerate(skew) if s == min_skew]
+    # return all maximum positions
+    return [i for i, s in enumerate(skew) if s == max_skew]
 
 
 if __name__ == "__main__":
-    genome ="datasets/Salmonella_full_genome.txt"
-    print(minimum_skew(genome))
+    # genome ="datasets/Salmonella_full_genome.txt"
+    # with open(genome, "r") as file:
+        # genome = file.read().strip()
+    
+    # print(minimum_skew(genome))
+    print(min_max_skew("GCATACACTTCCCAGTAGGTACTG"))
